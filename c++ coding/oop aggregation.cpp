@@ -8,25 +8,24 @@ class student{
 			name=n;
 			age=a;
 		}
-		set(string n,int a){
-			name=n;
-			age=a;
-		}
 		void display(){
 			cout<<"name :"<<name<<endl<<"age :"<<age<<endl;
 		}
+        ~student(){
+        cout << "student object is destroyed" << endl;
+        }
 };
 class school{
 	string school_name;
 	public:
-		student* ptr;
+		student*obj;
 		school(string n,student* p){
 			school_name=n;
-			ptr=p;
+			obj=p;
 		}
 		void show_s(){
 			cout<<"name of school is :"<<school_name<<endl;
-			ptr->display();
+			obj->display();
 		}
 		~school(){
 			cout<<"school object is distroyed."<<endl;

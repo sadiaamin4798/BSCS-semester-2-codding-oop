@@ -8,8 +8,13 @@ class vehical{
 };
 class car :public vehical{
 	public:
+    string name;
+		car(string n){
+			name=n;
+		}
 		void start()override{
 		cout<<"car has 4 wheels."<<endl;
+        cout<<"car name: "<<name<<endl;
 		}
 };
 class bike :public vehical{
@@ -24,11 +29,17 @@ class bike :public vehical{
 		}
 };
 int main(){
-	vehical* ptr_base;
-	car c1;
-	ptr_base=&c1;
-	ptr_base->start();
-	bike b1("70");
-	ptr_base=&b1;
-	ptr_base->start();
+/*	vehical* ptr;
+	car c1("civic");
+	ptr=&c1;
+	ptr->start();
+	bike b1("honda");
+	ptr=&b1;
+	ptr->start();*/
+     vehical obj;
+     obj.start();
+     car obj1("civic");
+     obj1.start();
+     bike obj2("honda");
+     obj2.start();
 }
